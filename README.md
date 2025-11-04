@@ -42,19 +42,63 @@ The exploration script (`explore_cycling_data.py`) provides:
 - Missing value analysis
 - Dataset overview and structure
 
+### Step 3: Descriptive Analysis
+- **Input**: Processed CSV data from `cycling.csv` file
+- **Process**: 
+  - Calculate descriptive statistics (mean, median, std, IQR, skewness, kurtosis) for overall dataset
+  - Compute statistics grouped by rider class
+  - Compute statistics grouped by stage class
+  - Analyze interaction between rider class and stage class
+  - Create statistical visualizations (box plots, violin plots, bar charts, heatmaps)
+- **Output**: Detailed descriptive statistics and multiple PNG visualization files
+
+The descriptive analysis script (`descriptive_analysis.py`) provides:
+- Overall descriptive statistics for the points variable
+- Statistics grouped by rider class (All Rounder, Climber, Sprinter, Unclassed)
+- Statistics grouped by stage class (flat, hills, mount)
+- Interaction statistics (rider class × stage class)
+- Multiple statistical graphics saved as PNG files
+
+### Step 4: Hypothesis Testing
+- **Input**: Processed CSV data from `cycling.csv` file
+- **Process**: 
+  - Test assumptions (normality, variance homogeneity)
+  - Research Question 1: Test for differences between rider classes using appropriate tests (ANOVA or Kruskal-Wallis)
+  - Perform post-hoc tests (Tukey HSD or Mann-Whitney U with Bonferroni correction)
+  - Research Question 2: Test interaction effects using two-way ANOVA
+  - Perform separate tests for each stage class when interaction is significant
+  - Create visualizations for test results
+- **Output**: Statistical test results and visualization files
+
+The hypothesis testing script (`hypothesis_testing.py`) provides:
+- Normality tests (Shapiro-Wilk) for each group
+- Variance homogeneity tests (Levene's test)
+- Main hypothesis tests (ANOVA or Kruskal-Wallis based on assumptions)
+- Post-hoc pairwise comparisons
+- Two-way ANOVA for interaction effects
+- Visualizations of test results saved as PNG files
+
 ## Files
 
 - `cycling.txt` - Raw input data file
 - `preprocess_cycling_data.py` - Python script for data preprocessing
 - `cycling.csv` - Processed CSV output file
 - `explore_cycling_data.py` - Python script for comprehensive data exploration
-- `logging.txt` - Output log file containing detailed data exploration results
+- `descriptive_analysis.py` - Python script for detailed descriptive analysis
+- `hypothesis_testing.py` - Python script for statistical hypothesis testing
+- `logging.txt` - Output log file containing detailed analysis results
+- `descriptive_*.png` - Statistical visualizations from descriptive analysis (box plots, bar charts, heatmaps)
+- `hypothesis_test_*.png` - Visualizations from hypothesis testing results
 
 ## Requirements
 
 - Python 3.x
 - pandas
 - numpy
+- matplotlib
+- seaborn
+- scipy
+- statsmodels
 - csv (built-in module)
 
 ## Usage
@@ -87,7 +131,34 @@ This will:
 3. Display detailed information about categorical and numeric variables
 4. Save the complete exploration output to `logging.txt`
 
-## Future Steps
+### Step 3: Descriptive Analysis
 
-Additional analysis steps will be documented here as the project progresses.
+Run the descriptive analysis script:
+
+```bash
+python descriptive_analysis.py
+```
+
+This will:
+1. Load the processed data from `cycling.csv`
+2. Calculate comprehensive descriptive statistics
+3. Generate statistics grouped by rider class and stage class
+4. Create multiple statistical visualizations
+5. Save all visualizations as PNG files
+
+### Step 4: Hypothesis Testing
+
+Run the hypothesis testing script:
+
+```bash
+python hypothesis_testing.py
+```
+
+This will:
+1. Load the processed data from `cycling.csv`
+2. Test statistical assumptions (normality, variance homogeneity)
+3. Perform hypothesis tests for research questions
+4. Generate post-hoc tests when needed
+5. Create visualizations of test results
+6. Save all visualizations as PNG files
 
