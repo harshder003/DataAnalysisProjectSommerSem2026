@@ -23,7 +23,7 @@ plt.style.use('seaborn-v0_8')
 sns.set_palette("husl")
 
 
-def load_data(csv_file='/input_data/cycling.csv'):
+def load_data(csv_file='./input_data/cycling.csv'):
     """Load the preprocessed cycling data."""
     df = pd.read_csv(csv_file, encoding='utf-8')
     return df
@@ -141,8 +141,8 @@ def create_visualizations(df):
                 f'{val:.2f}', ha='center', va='bottom', fontsize=10)
     
     plt.tight_layout()
-    plt.savefig('/results/descriptive_barplot_mean_rider_class.png', dpi=300, bbox_inches='tight')
-    print("Saved: /results/descriptive_barplot_mean_rider_class.png")
+    plt.savefig('./results/descriptive_barplot_mean_rider_class.png', dpi=300, bbox_inches='tight')
+    print("Saved: ./results/descriptive_barplot_mean_rider_class.png")
     plt.close()
     
     # 2. Interaction plot: Mean points by rider class and stage class
@@ -156,8 +156,8 @@ def create_visualizations(df):
     ax.set_xticklabels(ax.get_xticklabels(), rotation=45, ha='right')
     ax.grid(True, alpha=0.3, axis='y')
     plt.tight_layout()
-    plt.savefig('/results/descriptive_barplot_interaction.png', dpi=300, bbox_inches='tight')
-    print("Saved: /results/descriptive_barplot_interaction.png")
+    plt.savefig('./results/descriptive_barplot_interaction.png', dpi=300, bbox_inches='tight')
+    print("Saved: ./results/descriptive_barplot_interaction.png")
     plt.close()
     
     # 3. Heatmap: Mean points by rider class and stage class
@@ -168,8 +168,8 @@ def create_visualizations(df):
     ax.set_xlabel('Stage Class', fontsize=12)
     ax.set_ylabel('Rider Class', fontsize=12)
     plt.tight_layout()
-    plt.savefig('/results/descriptive_heatmap_interaction.png', dpi=300, bbox_inches='tight')
-    print("Saved: /results/descriptive_heatmap_interaction.png")
+    plt.savefig('./results/descriptive_heatmap_interaction.png', dpi=300, bbox_inches='tight')
+    print("Saved: ./results/descriptive_heatmap_interaction.png")
     plt.close()
 
 

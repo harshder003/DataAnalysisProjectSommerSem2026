@@ -37,7 +37,7 @@ plt.style.use('seaborn-v0_8')
 sns.set_palette("husl")
 
 
-def load_data(csv_file='/input_data/cycling.csv'):
+def load_data(csv_file='./input_data/cycling.csv'):
     """Load the preprocessed cycling data."""
     df = pd.read_csv(csv_file, encoding='utf-8')
     return df
