@@ -2,6 +2,13 @@
 
 A data analysis project focused on processing and analyzing cycling data.
 
+**Note**: This project is part of the application for the Master in Data Science program at TU Dortmund (Technische Universität Dortmund).
+
+## Report
+
+A detailed report documenting the analysis and findings is available in the repository:
+- `Data_Analysis_Project_TU_Dortmund.pdf` - Complete project report with methodology, results, and conclusions
+
 ## Project Overview
 
 This project involves preprocessing and analyzing cycling data, starting with converting raw text data into a structured CSV format for further analysis.
@@ -80,6 +87,7 @@ The hypothesis testing script (`hypothesis_testing.py`) provides:
 
 ## Files
 
+- `Data_Analysis_Project_TU_Dortmund.pdf` - Complete project report with methodology, results, and conclusions
 - `cycling.txt` - Raw input data file
 - `preprocess_cycling_data.py` - Python script for data preprocessing
 - `cycling.csv` - Processed CSV output file
