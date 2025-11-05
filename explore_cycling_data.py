@@ -15,7 +15,7 @@ if sys.platform == 'win32':
     sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace', line_buffering=True)
 
 
-def explore_cycling_data(csv_file='cycling.csv'):
+def explore_cycling_data(csv_file='/input_data/cycling.csv'):
     """
     Load and explore the cycling dataset.
     

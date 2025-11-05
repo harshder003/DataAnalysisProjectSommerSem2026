@@ -9,7 +9,7 @@ import csv
 import pandas as pd
 
 
-def preprocess_cycling_data(input_file='cycling.txt', output_file='cycling.csv'):
+def preprocess_cycling_data(input_file='/input_data/cycling.txt', output_file='/input_data/cycling.csv'):
     """
     Convert cycling.txt from space-separated quoted format to CSV.
     

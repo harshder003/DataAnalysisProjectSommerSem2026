@@ -159,6 +159,3 @@ This will:
 2. Test statistical assumptions (normality, variance homogeneity)
 3. Perform hypothesis tests for research questions
 4. Generate post-hoc tests when needed
-5. Create visualizations of test results
-6. Save all visualizations as PNG files
-
